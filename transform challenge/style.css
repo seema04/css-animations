@@ -1,0 +1,20 @@
+body{
+  position: relative;
+}
+.box{
+  position: absolute;
+  top: 80%;
+  left:50%;
+  height: 30px;
+  width: 30px;
+  background-color: aqua;
+  border: 1px solid black;
+  animation: transform 2s ease 0.5s infinite alternate both;
+}
+
+@keyframes transform {
+  100%{
+  transform: scale(0.5, 0.5) rotate(45deg) translateX(50px);
+  }
+  
+}

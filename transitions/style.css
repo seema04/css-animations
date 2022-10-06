@@ -1,0 +1,47 @@
+.heading{
+  color:teal;
+  font-size: 1.5rem;
+  /* transition: color 2s , font-size 1s , letter-spacing 0.5s; */
+
+   /* transition: all 2s; */
+
+   transition-property: all;
+   transition-duration: 2s;
+   transition-delay: 1s;
+   transition-timing-function: ease;
+}
+
+.heading:hover{
+ color: indianred;
+ font-size: 2rem;
+ letter-spacing: 10px;
+}
+
+/* customizing transitions. */
+.heading1{
+  /* transition-delay: 1s;
+  transition-property: font-size;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in; */
+
+  /* transition shorthand  : property, duration, timing, function, delay */
+
+  transition: font-size 0.5s ease-in 1s;
+  color: lightgreen;
+}
+
+.heading1:hover{
+  font-size: 2rem;
+}
+
+.heading2{
+  color:rgb(190, 199, 61);
+  font-size: 15px;
+  transition: all 1s ease 0.2s;
+}
+.heading2:hover{
+  font-size: 32px;
+  color:slateblue;
+}
+
+
