@@ -1,0 +1,46 @@
+ body{
+  position: relative;
+  height: 100px;
+}
+.b{
+  height: 50px;
+  width:50px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+}
+.box{
+  position: absolute;
+  border-top: 2px solid red;
+  border-left: 2px solid cyan;
+  border-right: 2px solid lightsalmon;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: olivedrab;
+  animation: transform 2s infinite;
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes transform {
+  100%{
+    /* 1. scale */
+    /* transform: scale(2,4); */
+
+    /* 2. translate */
+    /* transform: translate(50%, 25%); */
+    /* transform: translate(50px,-50px); */
+
+    /* 3. rotate property */
+    /* transform: rotate(-180deg); */
+
+    /* 4. skew */
+    transform: skew(0,50deg);
+  }
+
+
+}
