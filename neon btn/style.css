@@ -1,0 +1,72 @@
+:root{
+  --bg-clr: #293462;
+  --btn-clr: #5800FF;
+
+}
+*,
+*::after,
+*::before{
+ margin: 0;
+ box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', 'sans-serif';
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-clr);
+}
+
+.neon-btn{
+ text-decoration: none;
+ padding: 0.5em 1em;
+ font-size: 3rem;
+ border-radius: .75rem;
+ border: 2px solid var(--btn-clr);
+ cursor: pointer;
+ color: var(--btn-clr);
+ text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.2),0 0 0.45em var(--btn-clr);
+ box-shadow: inset 0 0 0.5em var(--btn-clr),0 0 0.5em var(--btn-clr); 
+ position: relative;
+
+}
+
+.neon-btn::before{
+  position: absolute;
+  content: '';
+  top:120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--btn-clr);
+  transform: perspective(1em) rotateX(20deg) scale(1,0.45);
+  filter: blur(1.2em);
+  opacity: 0.8;
+
+}
+
+.neon-btn::after{
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: .5rem;
+  box-shadow: 0 0 5em 0.5em var(--btn-clr);
+  opacity: 0;
+  transition: opacity 1s;
+
+} 
+.neon-btn:hover::after{
+  opacity: 1;
+}
+
+.neon-btn::hover,
+.neon-btn::focus{
+background-color: var(--btn-clr);
+color: var(--bg-clr);
+text-shadow: none;
+
+}
